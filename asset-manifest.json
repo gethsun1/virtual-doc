@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/virtual-doc/static/js/main.4a5ed1cb.js",
+    "main.js": "/virtual-doc/static/js/main.c9912a45.js",
     "static/media/logo.webp": "/virtual-doc/static/media/logo.9599017176b9e3d5daad.webp",
     "index.html": "/virtual-doc/index.html",
-    "main.4a5ed1cb.js.map": "/virtual-doc/static/js/main.4a5ed1cb.js.map"
+    "main.c9912a45.js.map": "/virtual-doc/static/js/main.c9912a45.js.map"
   },
   "entrypoints": [
-    "static/js/main.4a5ed1cb.js"
+    "static/js/main.c9912a45.js"
   ]
 }
