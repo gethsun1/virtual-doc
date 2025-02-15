@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.js": "/virtual-doc/static/js/main.c9912a45.js",
+    "main.js": "/virtual-doc/static/js/main.cc9af9e8.js",
+    "static/media/modal-bg.webp": "/virtual-doc/static/media/modal-bg.fd696670fe42bae6b9d2.webp",
     "static/media/logo.webp": "/virtual-doc/static/media/logo.9599017176b9e3d5daad.webp",
     "index.html": "/virtual-doc/index.html",
-    "main.c9912a45.js.map": "/virtual-doc/static/js/main.c9912a45.js.map"
+    "main.cc9af9e8.js.map": "/virtual-doc/static/js/main.cc9af9e8.js.map"
   },
   "entrypoints": [
-    "static/js/main.c9912a45.js"
+    "static/js/main.cc9af9e8.js"
   ]
 }
