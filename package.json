@@ -1,5 +1,6 @@
 {
-  "name": "virtual-doctor-mvp",
+  "name": "virtual-doctor",
+  "author": "Gethsun",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://gethsun1.github.io/virtual-doc",
