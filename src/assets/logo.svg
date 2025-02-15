@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a7a8d;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#3ab4c9;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="softShadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="rgba(42,122,141,0.2)"/>
+    </filter>
+  </defs>
+
+  <!-- Group everything together and scale it properly -->
+  <g transform="translate(50,50) scale(1.5)">
+    <!-- Shield Base -->
+    <path d="M70 10Q130 -10 190 10L170 240Q130 280 70 240Z"
+          fill="url(#logoGradient)"
+          filter="url(#softShadow)"/>
+
+    <!-- Connected Cross -->
+    <g transform="translate(110,90) scale(0.6)">
+      <!-- Digital Connection Nodes -->
+      <circle cx="0" cy="0" r="12" fill="#fff"/>
+      <circle cx="80" cy="0" r="12" fill="#fff"/>
+      <circle cx="0" cy="80" r="12" fill="#fff"/>
+      <circle cx="80" cy="80" r="12" fill="#fff"/>
+
+      <!-- Cross Lines with Connection Points -->
+      <path d="M0 0L80 80M80 0L0 80"
+            stroke="#fff"
+            stroke-width="8"
+            stroke-linecap="round"/>
+
+      <!-- Signal Waves -->
+      <path d="M-40 40Q-20 30 0 40T40 40"
+            stroke="#e6f4f1"
+            stroke-width="4"
+            opacity="0.8"
+            transform="rotate(45)"/>
+    </g>
+
+    <!-- Chat Bubble -->
+    <path d="M140 180h80v40l-20-20h-60z"
+          fill="#fff"
+          opacity="0.9"/>
+  </g>
+
+  <!-- Centered Text -->
+  <text x="200" y="340"
+        font-family="Arial, sans-serif"
+        font-weight="bold"
+        font-size="32"
+        fill="url(#logoGradient)"
+        text-anchor="middle">
+    <tspan x="200" dy="0">Virtual</tspan>
+    <tspan x="200" dy="40">Doctor</tspan>
+  </text>
+</svg>
