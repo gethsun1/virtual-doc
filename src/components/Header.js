@@ -3,6 +3,7 @@ import {
   AppBar, Toolbar, Box, Typography, Button, Modal, Paper 
 } from '@mui/material';
 import logo from '../assets/logo.webp';
+import modalBg from '../assets/modal-bg.webp'; 
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -93,41 +94,60 @@ const Header = () => {
       <Modal open={open} onClose={handleClose}>
         <Paper 
           sx={{ 
-            width: 300, 
+            width: 350, 
             mx: 'auto', 
-            mt: 20, 
-            p: 3, 
+            mt: 15, 
+            p: 4, 
             textAlign: 'center', 
-            borderRadius: 2 
+            borderRadius: 3, 
+            backgroundImage: `url(${modalBg})`, 
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center', 
+            color: 'white',
+            position: 'relative',
+            boxShadow: 5
           }}
         >
-          <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2 }}>
-            Register As:
-          </Typography>
-          <Button 
-            href="/register/patient" 
-            fullWidth 
+          {/* Overlay for readability */}
+          <Box 
             sx={{ 
-              backgroundColor: '#2a7a8d', 
-              color: 'white', 
-              my: 1, 
-              '&:hover': { backgroundColor: '#1f5a6b' } 
-            }}
-          >
-            Signup as a Patient
-          </Button>
-          <Button 
-            href="/register/doctor" 
-            fullWidth 
-            sx={{ 
-              backgroundColor: '#3ab4c9', 
-              color: 'white', 
-              my: 1, 
-              '&:hover': { backgroundColor: '#2a8ea2' } 
-            }}
-          >
-            Signup as a Doctor
-          </Button>
+              position: 'absolute', 
+              top: 0, left: 0, right: 0, bottom: 0, 
+              backgroundColor: 'rgba(0, 0, 0, 0.5)', 
+              borderRadius: 3 
+            }} 
+          />
+
+          {/* Modal Content */}
+          <Box sx={{ position: 'relative', zIndex: 1 }}>
+            <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2 }}>
+              Register As:
+            </Typography>
+            <Button 
+              href="/register/patient" 
+              fullWidth 
+              sx={{ 
+                backgroundColor: '#2a7a8d', 
+                color: 'white', 
+                my: 1, 
+                '&:hover': { backgroundColor: '#1f5a6b' } 
+              }}
+            >
+              Signup as a Patient
+            </Button>
+            <Button 
+              href="/register/doctor" 
+              fullWidth 
+              sx={{ 
+                backgroundColor: '#3ab4c9', 
+                color: 'white', 
+                my: 1, 
+                '&:hover': { backgroundColor: '#2a8ea2' } 
+              }}
+            >
+              Signup as a Doctor
+            </Button>
+          </Box>
         </Paper>
       </Modal>
     </>
