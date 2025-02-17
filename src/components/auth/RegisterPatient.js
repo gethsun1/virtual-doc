@@ -18,6 +18,11 @@ const RegisterPatient = () => {
     if (result.success) {
       setSuccess("Registration successful! You can now login.");
       setError('');
+      // Optionally clear the fields
+      setEmail('');
+      setPassword('');
+      // Redirect to the landing page
+      navigate('/');
     } else {
       setError(result.message);
       setSuccess('');
@@ -26,16 +31,37 @@ const RegisterPatient = () => {
 
   return (
     <Container maxWidth="sm">
-      <Box sx={{ mt: 5, p: 3, boxShadow: 3, borderRadius: 2 }}>
-        <Typography variant="h5" mb={2}>Register as Patient</Typography>
-        
-        {error && <Typography color="error">{error}</Typography>}
-        {success && <Typography color="success.main">{success}</Typography>}
-        
-        <TextField label="Email" fullWidth margin="normal" onChange={(e) => setEmail(e.target.value)} />
-        <TextField label="Password" type="password" fullWidth margin="normal" onChange={(e) => setPassword(e.target.value)} />
-        
-        <Button variant="contained" color="primary" fullWidth sx={{ mt: 2 }} onClick={handleRegister}>
+      <Box
+        component="form"
+        onSubmit={handleRegister}
+        sx={{ mt: 5, p: 3, boxShadow: 3, borderRadius: 2 }}
+      >
+        <Typography variant="h5" mb={2}>
+          Register as Patient
+        </Typography>
+
+        {error && <Typography color="error" sx={{ mb: 2 }}>{error}</Typography>}
+        {success && <Typography color="success.main" sx={{ mb: 2 }}>{success}</Typography>}
+
+        <TextField
+          label="Email"
+          fullWidth
+          margin="normal"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <TextField
+          label="Password"
+          type="password"
+          fullWidth
+          margin="normal"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+
+        <Button type="submit" variant="contained" color="primary" fullWidth sx={{ mt: 2 }}>
           Register
         </Button>
       </Box>
